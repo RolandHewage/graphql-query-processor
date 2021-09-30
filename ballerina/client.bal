@@ -68,9 +68,33 @@ isolated function externalInit(Client caller, http:Client httpCaller) = @java:Me
 
 
 
+// # Provides API key configurations needed when communicating with a remote HTTP endpoint.
+// public type ApiKeysConfig record {|
+//     # Represents API Key `X-API-KEY`
+//     string xApiKey;
+// |};
 
+// public isolated function init(ApiKeysConfig apiKeyConfig, string serviceUrl, 
+//                               http:ClientConfiguration clientConfig = {}) returns error? {
+//     map<any> headerValues = {"X-API-KEY": apiKeyConfig.xApiKey};
+//     map<string|string[]> accHeaders = getMapForHeaders(headerValues);
+//     http:Client httpEp = check new (serviceUrl, clientConfig);
+//     externalInit(self, httpEp, accHeaders);
+// }
 
-
+// # Generate header map for given header values.
+// #
+// # + headerParam - Headers  map
+// # + return - Returns generated map or error at failure of client initialization
+// isolated function getMapForHeaders(map<any> headerParam) returns map<string|string[]> {
+//     map<string|string[]> headerMap = {};
+//     foreach var [key, value] in headerParam.entries() {
+//         if value is string || value is string[] {
+//             headerMap[key] = value;
+//         }
+//     }
+//     return headerMap;
+// }
 
 // isolated function countryProcessor(typedesc<Country> returnType, *CountryVariables variables)
 // returns Country {

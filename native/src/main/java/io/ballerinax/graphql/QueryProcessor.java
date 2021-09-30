@@ -11,12 +11,15 @@ import io.ballerina.runtime.api.types.RecordType;
 import io.ballerina.runtime.api.types.StringType;
 import io.ballerina.runtime.api.utils.StringUtils;
 import io.ballerina.runtime.api.utils.TypeUtils;
-import io.ballerina.runtime.api.values.*;
+import io.ballerina.runtime.api.values.BArray;
+import io.ballerina.runtime.api.values.BError;
+import io.ballerina.runtime.api.values.BMap;
+import io.ballerina.runtime.api.values.BObject;
+import io.ballerina.runtime.api.values.BString;
+import io.ballerina.runtime.api.values.BTypedesc;
 import org.ballerinalang.net.http.HttpErrorType;
 import org.ballerinalang.net.http.HttpUtil;
-import org.ballerinalang.net.http.ValueCreatorUtils;
 import org.json.JSONObject;
-import org.wso2.ballerinalang.compiler.semantics.model.types.BJSONType;
 
 import java.io.IOException;
 import java.net.URI;
