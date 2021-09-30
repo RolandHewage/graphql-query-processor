@@ -1,0 +1,10 @@
+[package]
+org = "ballerinax"
+name = "grapql"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true
+
+[[platform.java11.dependency]]
+path = "../native/build/libs/native-1.0-SNAPSHOT-all.jar"
